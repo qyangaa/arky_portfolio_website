@@ -13,10 +13,10 @@ $(document).ready(function () {
     $(".menu-btn i").toggleClass("active");
   });
 
-  var cw = $(".about .about-content .left img").width();
-  $(".about .about-content .left img").css({ height: cw + "px" });
+  var cw = $(".about .content .left img").width();
+  $(".about .content .left img").css({ height: cw + "px" });
   $(window).resize(function () {
-    var cw = $(".about .about-content .left img").width();
-    $(".about .about-content .left img").css({ height: cw + "px" });
+    var cw = $(".about .content .left img").width();
+    $(".about .content .left img").css({ height: cw + "px" });
   });
 });

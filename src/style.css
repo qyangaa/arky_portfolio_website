@@ -2,10 +2,16 @@
 :root {
   --dark-bg-color: #526088;
   --light-bg-color: #ccc5bf;
+  --light-bg-alternate-top: #f5f5f3;
+  --light-bg-alternate: #eaeae8;
+  --light-bg-alternate-hover: #f5f5f35e;
   --dark-text-color: #526088;
   --light-text-color: #fff;
   --dark-text-color-emphasis: #c26f56;
   --dark-text-color-main: #2f374b;
+  --dark-text-color-alternate: #545e49;
+  --dark-text-color-main-alternate: #2c3324;
+  --dark-text-color-emphasis-alternate: #8a3a21;
 }
 
 * {
@@ -107,26 +113,30 @@
   margin: auto 0 auto 40px;
 }
 
-.home .home-content .text-1 {
+.home .content {
+  display: inline;
+}
+
+.home .content .text-1 {
   font-size: 27px;
 }
 
-.home .home-content .text-2 {
+.home .content .text-2 {
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
 }
 
-.home .home-content .text-3 {
+.home .content .text-3 {
   font-size: 40px;
   margin: 5px 0;
 }
 
-.home .home-content .text-3 span {
+.home .content .text-3 span {
   color: var(--dark-text-color-emphasis);
 }
 
-.home .home-content a {
+.home .content a {
   display: inline-block;
   background: var(--dark-text-color-emphasis);
   color: var(--light-text-color);
@@ -138,21 +148,18 @@
   transition: all 0.3s ease;
 }
 
-.home .home-content a:hover {
+.home .content a:hover {
   color: var(--dark-text-color);
   background: none;
 }
 
-/* About Section */
+/* Sections */
 section {
   padding: 100px 0;
-}
-
-.about {
   font-family: "Poppins", sans-serif;
 }
 
-.about .title {
+section .title {
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -163,7 +170,7 @@ section {
   font-family: "Ubuntu", sans-serif;
 }
 
-.about .title::before {
+section .title::before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -174,8 +181,7 @@ section {
   background: var(--dark-text-color);
   transform: translateX(-50%);
 }
-.about .title::after {
-  content: "who i am";
+section .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -186,47 +192,14 @@ section {
   transform: translateX(-50%);
 }
 
-.about .about-content {
+section .content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
-.about .about-content .left {
-  width: 45%;
-}
-
-.about .about-content .left img {
-  /* height: 80%; */
-  width: 80%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.about .about-content .right {
-  width: 55%;
-  color: var(--dark-text-color-main);
-}
-
-.about .about-content .right .text {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.about .about-content .right .text span {
-  color: var(--dark-text-color-emphasis);
-}
-
-.about .about-content .right p {
-  text-align: justify;
-}
-.about .about-content .right p {
-  text-align: justify;
-}
-
-.about a {
+section a {
   display: inline-block;
   background: var(--dark-text-color-emphasis);
   color: var(--light-text-color);
@@ -238,11 +211,175 @@ section {
   transition: all 0.3s ease;
 }
 
-.about a:hover {
+section a:hover {
   color: var(--dark-text-color);
   background: none;
 }
 
+/* About Section */
+.about .title::after {
+  content: "who i am";
+}
+
+.about .content .left {
+  width: 45%;
+}
+
+.about .content .left img {
+  /* height: 80%; */
+  width: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about .content .right {
+  width: 55%;
+  color: var(--dark-text-color-main);
+}
+
+.about .content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .content .right .text span {
+  color: var(--dark-text-color-emphasis);
+}
+
+.about .content .right p {
+  text-align: justify;
+}
+.about .content .right p {
+  text-align: justify;
+}
+
+/* Experiences Section */
+.experiences {
+  background: var(--light-bg-alternate);
+  color: var(--dark-text-color-main-alternate);
+}
+
+.experiences .title {
+  color: var(--dark-text-color-alternate);
+}
+
+.experiences .title::before {
+  background: var(--dark-text-color-alternate);
+}
+
+.experiences .title::after {
+  content: "what I do";
+  background: var(--light-bg-alternate);
+  color: var(--dark-text-color-emphasis-alternate);
+}
+
+.experiences .content .card {
+  width: calc(33% - 20px);
+  color: var(--dark-text-color-main-alternate);
+  background: var(--light-bg-alternate-top);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experiences .content .card .box {
+  transition: all 0.3s ease;
+}
+
+.experiences .content .card:hover {
+  background: var(--light-bg-alternate-hover);
+}
+
+.experiences .content .card:hover .box {
+  transform: scale(1.05);
+}
+.experiences .content .card i {
+  font-size: 50px;
+  color: var(--dark-text-color-main);
+  transition: all 0.9s ease;
+}
+
+.experiences .content .card:hover i {
+  color: var(--dark-text-color-emphasis);
+}
+
+.experiences .content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--dark-text-color-main-alternate);
+  margin: 10px 0 10px;
+  transition: all 0.9s ease;
+}
+
+.experiences .content .card:hover .text {
+  color: var(--dark-text-color-emphasis);
+}
+
+/* Skills section */
+.skills .title::after {
+  content: "what I know";
+}
+
+.skills .content .column {
+  width: calc(50% - 30px);
+  margin-bottom: 50px;
+}
+
+.skills .content .left .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .content .left .p {
+  text-align: justify;
+}
+
+.skills .content .right .bars {
+  margin-bottom: 15px;
+}
+.skills .content .right .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skills .content .right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.skills .content .right .line {
+  height: 5px;
+  width: 100%;
+  background: var(--light-bg-color);
+  position: relative;
+}
+.skills .content .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  left: 0;
+  top: 0;
+  background: var(--dark-text-color-emphasis);
+}
+
+.skills .content .right .html::before {
+  width: 90%;
+}
+.skills .content .right .css::before {
+  width: 80%;
+}
+.skills .content .right .javscript::before {
+  width: 70%;
+}
+.skills .content .right .python::before {
+  width: 100%;
+}
 /* Responsive media query */
 
 @media (max-width: 1104px) {
@@ -295,65 +432,77 @@ section {
     content: "\f00d";
   }
 
-  .home .home-content .text-2 {
+  .home .content .text-2 {
     font-size: 60px;
   }
 
-  .home .home-content .text-3 {
+  .home .content .text-3 {
     font-size: 30px;
   }
 
-  .home .home-content a {
+  .home .content a {
     font-size: 23px;
     padding: 8px 20px;
   }
 
-  .about .about-content .column {
+  .about .content .column {
     width: 50%;
     margin: 0 40px;
   }
-  .about .about-content .left {
+  .about .content .left {
     width: 80%;
     display: flex;
     justify-content: center;
     margin: 0% auto 60px;
     padding: 0;
   }
-  .about .about-content .right {
+  .about .content .right {
     flex: 100%;
+  }
+
+  .experiences .content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 690px) {
-  .home .home-content .text-1 {
+  .home .content .text-1 {
     font-size: 20px;
   }
-  .home .home-content .text-2 {
+  .home .content .text-2 {
     font-size: 50px;
   }
 
-  .home .home-content .text-3 {
+  .home .content .text-3 {
     font-size: 25px;
   }
 
-  .home .home-content a {
+  .home .content a {
     font-size: 20px;
     padding: 8px 25px;
   }
+  .experiences .content .card {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+  }
+  .skills .content .column {
+    width: calc(100% - 30px);
+  }
 }
 @media (max-width: 500px) {
-  .home .home-content .text-1 {
+  .home .content .text-1 {
     font-size: 15px;
   }
-  .home .home-content .text-2 {
+  .home .content .text-2 {
     font-size: 40px;
   }
 
-  .home .home-content .text-3 {
+  .home .content .text-3 {
     font-size: 20px;
   }
 
-  .home .home-content a {
+  .home .content a {
     font-size: 15px;
     padding: 8px 10px;
   }
