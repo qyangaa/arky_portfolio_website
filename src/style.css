@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+:root {
+  --dark-bg-color: #526088;
+  --light-bg-color: #ccc5bf;
+  --dark-text-color: #526088;
+  --light-text-color: #fff;
+  --dark-text-color-emphasis: #c26f56;
+  --dark-text-color-main: #2f374b;
+}
+
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* Navbar */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-family: "ubuntu", sans-serif;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: var(--light-bg-color);
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: var(--dark-text-color);
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: var(--dark-text-color-emphasis);
+  font-size: 35px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: var(--light-text-color);
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: var(--dark-text-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: var(--dark-text-color-emphasis);
+}
+
+.navbar.sticky .menu li a:hover {
+  color: var(--light-text-color);
+}
+
+/* Menu Buttons */
+.menu-btn {
+  color: var(--dark-text-color);
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+
+  background: url("images/banner2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: var(--dark-text-color);
+  min-height: 500px;
+  font-family: "ubuntu", sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+  color: var(--dark-text-color-emphasis);
+}
+
+.home .home-content a {
+  display: inline-block;
+  background: var(--dark-text-color-emphasis);
+  color: var(--light-text-color);
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--dark-text-color-emphasis);
+  transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+  color: var(--dark-text-color);
+  background: none;
+}
+
+/* About Section */
+section {
+  padding: 100px 0;
+}
+
+.about {
+  font-family: "Poppins", sans-serif;
+}
+
+.about .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  color: var(--dark-text-color);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+
+  background: var(--dark-text-color);
+  transform: translateX(-50%);
+}
+.about .title::after {
+  content: "who i am";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  padding: 5px;
+  color: var(--dark-text-color-emphasis);
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  /* height: 80%; */
+  width: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about .about-content .right {
+  width: 55%;
+  color: var(--dark-text-color-main);
+}
+
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+  color: var(--dark-text-color-emphasis);
+}
+
+.about .about-content .right p {
+  text-align: justify;
+}
+.about .about-content .right p {
+  text-align: justify;
+}
+
+.about a {
+  display: inline-block;
+  background: var(--dark-text-color-emphasis);
+  color: var(--light-text-color);
+  font-size: 15px;
+  padding: 5px 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid var(--dark-text-color-emphasis);
+  transition: all 0.3s ease;
+}
+
+.about a:hover {
+  color: var(--dark-text-color);
+  background: none;
+}
+
+/* Responsive media query */
+
+@media (max-width: 1104px) {
+  .home .max-width {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 850px) {
+  .max-width {
+    padding: 0 30px;
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0%;
+    background: var(--light-bg-color);
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+
+  .home .home-content .text-2 {
+    font-size: 60px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+
+  .home .home-content a {
+    font-size: 23px;
+    padding: 8px 20px;
+  }
+
+  .about .about-content .column {
+    width: 50%;
+    margin: 0 40px;
+  }
+  .about .about-content .left {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0% auto 60px;
+    padding: 0;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+}
+
+@media (max-width: 690px) {
+  .home .home-content .text-1 {
+    font-size: 20px;
+  }
+  .home .home-content .text-2 {
+    font-size: 50px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 25px;
+  }
+
+  .home .home-content a {
+    font-size: 20px;
+    padding: 8px 25px;
+  }
+}
+@media (max-width: 500px) {
+  .home .home-content .text-1 {
+    font-size: 15px;
+  }
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 20px;
+  }
+
+  .home .home-content a {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+}
