@@ -216,6 +216,60 @@ section a:hover {
   background: none;
 }
 
+section .content .card {
+  width: calc(33% - 20px);
+  color: var(--dark-text-color-main-alternate);
+  background: var(--light-bg-alternate-top);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+
+section .content .card .box {
+  transition: all 0.3s ease;
+}
+
+section .content .card:hover {
+  background: var(--light-bg-alternate-hover);
+}
+
+section .content .card:hover .box {
+  transform: scale(1.05);
+}
+section .content .card i {
+  font-size: 50px;
+  color: var(--dark-text-color-main);
+  transition: all 0.9s ease;
+}
+
+section .content .card:hover i {
+  color: var(--dark-text-color-emphasis);
+}
+
+section .content .card img {
+  height: 200px;
+  width: 300px;
+  object-fit: contain;
+  border-radius: 6px;
+  padding: 20px 10px;
+  transition: all 0.9s ease;
+}
+
+section .content .card:hover img {
+  color: var(--dark-text-color-emphasis);
+}
+
+section .content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--dark-text-color-main-alternate);
+  margin: 10px 0 10px;
+  transition: all 0.9s ease;
+}
+
 /* About Section */
 .about .title::after {
   content: "who i am";
@@ -274,50 +328,6 @@ section a:hover {
   color: var(--dark-text-color-emphasis-alternate);
 }
 
-.experiences .content .card {
-  width: calc(33% - 20px);
-  color: var(--dark-text-color-main-alternate);
-  background: var(--light-bg-alternate-top);
-  text-align: center;
-  border-radius: 6px;
-  padding: 20px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.experiences .content .card .box {
-  transition: all 0.3s ease;
-}
-
-.experiences .content .card:hover {
-  background: var(--light-bg-alternate-hover);
-}
-
-.experiences .content .card:hover .box {
-  transform: scale(1.05);
-}
-.experiences .content .card i {
-  font-size: 50px;
-  color: var(--dark-text-color-main);
-  transition: all 0.9s ease;
-}
-
-.experiences .content .card:hover i {
-  color: var(--dark-text-color-emphasis);
-}
-
-.experiences .content .card .text {
-  font-size: 25px;
-  font-weight: 500;
-  color: var(--dark-text-color-main-alternate);
-  margin: 10px 0 10px;
-  transition: all 0.9s ease;
-}
-
-.experiences .content .card:hover .text {
-  color: var(--dark-text-color-emphasis);
-}
-
 /* Skills section */
 .skills .title::after {
   content: "what I know";
@@ -325,7 +335,6 @@ section a:hover {
 
 .skills .content .column {
   width: calc(50% - 30px);
-  margin-bottom: 50px;
 }
 
 .skills .content .left .text {
@@ -380,6 +389,23 @@ section a:hover {
 .skills .content .right .python::before {
   width: 100%;
 }
+
+/* Education Section */
+.education {
+  background: var(--light-bg-alternate);
+  color: var(--dark-text-color-main-alternate);
+}
+
+.education .title::before {
+  background: var(--dark-text-color-alternate);
+}
+
+.education .title::after {
+  content: "where I studied";
+  background: var(--light-bg-alternate);
+  color: var(--dark-text-color-emphasis-alternate);
+}
+
 /* Responsive media query */
 
 @media (max-width: 1104px) {
@@ -460,7 +486,7 @@ section a:hover {
     flex: 100%;
   }
 
-  .experiences .content .card {
+  section .content .card {
     width: calc(50% - 10px);
     margin-bottom: 10px;
   }
@@ -482,12 +508,13 @@ section a:hover {
     font-size: 20px;
     padding: 8px 25px;
   }
-  .experiences .content .card {
+  section .content .card {
     width: calc(100% - 10px);
     margin-bottom: 10px;
   }
   .skills .content .column {
     width: calc(100% - 30px);
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 500px) {
