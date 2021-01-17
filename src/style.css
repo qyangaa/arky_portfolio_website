@@ -255,6 +255,7 @@ section .content .card img {
   object-fit: contain;
   border-radius: 6px;
   padding: 20px 10px;
+  margin: 0 auto;
   transition: all 0.9s ease;
 }
 
@@ -406,6 +407,53 @@ section .content .card .text {
   color: var(--dark-text-color-emphasis-alternate);
 }
 
+.education .content .card {
+  width: 100%;
+  padding: 25px 35px;
+  justify-content: center;
+}
+
+.education .content .card .box {
+  display: flex;
+  flex-direction: column;
+}
+
+.owl-theme .owl-controls .owl-page {
+  display: inline-block;
+}
+.owl-theme .owl-controls .owl-page span {
+  background: none repeat scroll 0 0 #869791;
+  border-radius: 20px;
+  display: block;
+  height: 12px;
+  margin: 5px 7px;
+  opacity: 0.5;
+  width: 12px;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 5px solid var(--dark-text-color-emphasis-alternate) !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 50px;
+  border-radius: 14px;
+}
+
+.owl-dot:hover {
+  background: var(--dark-text-color-emphasis-alternate) !important;
+}
 /* Responsive media query */
 
 @media (max-width: 1104px) {
