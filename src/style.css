@@ -197,13 +197,15 @@ section .content {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  color: var(--dark-text-color-main);
 }
 
-section a {
+section a,
+section button {
   display: inline-block;
   background: var(--dark-text-color-emphasis);
   color: var(--light-text-color);
-  font-size: 15px;
+  font-size: 18px;
   padding: 5px 20px;
   margin-top: 20px;
   border-radius: 6px;
@@ -211,7 +213,8 @@ section a {
   transition: all 0.3s ease;
 }
 
-section a:hover {
+section a:hover,
+section button:hover {
   color: var(--dark-text-color);
   background: none;
 }
@@ -254,7 +257,7 @@ section .content .card img {
   width: 300px;
   object-fit: contain;
   border-radius: 6px;
-  padding: 20px 10px;
+  padding: 20px 0px;
   margin: 0 auto;
   transition: all 0.9s ease;
 }
@@ -454,6 +457,98 @@ section .content .card .text {
 .owl-dot:hover {
   background: var(--dark-text-color-emphasis-alternate) !important;
 }
+
+/* Contact section */
+.contact .title::after {
+  content: "get in touch";
+}
+
+.contact .content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark-text-color);
+}
+
+.contact .content .left p {
+  text-align: justify;
+}
+
+.contact .content .left .icons {
+  margin: 10px 0;
+}
+
+.contact .content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .content .row .info {
+  margin-left: 30px;
+}
+
+.contact .content .row i {
+  font-size: 30px;
+  color: var(--dark-text-color);
+}
+
+.contact .content .row .info .head {
+  font-weight: 500;
+}
+
+.contact .content .row .info .sub-title {
+  color: var(--dark-text-color-main);
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields.field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .right form .name {
+  margin-right: 10px;
+}
+
+.contact .right form .email {
+  margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .field.textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--light-bg-color);
+  border-radius: 6px;
+  outline: none;
+  padding: 3px 15px;
+  font-size: 17px;
+  font-family: "Poppings", sans-serif;
+}
+
+.contact .right form .textarea {
+  height: 200px;
+}
+
+.contact .right form .field.textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form button {
+  margin-top: 0px;
+}
+
 /* Responsive media query */
 
 @media (max-width: 1104px) {
@@ -538,6 +633,11 @@ section .content .card .text {
     width: calc(50% - 10px);
     margin-bottom: 10px;
   }
+
+  .contact .content .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
 }
 
 @media (max-width: 690px) {
@@ -563,6 +663,9 @@ section .content .card .text {
   .skills .content .column {
     width: calc(100% - 30px);
     margin-bottom: 50px;
+  }
+  section .content .card img {
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
